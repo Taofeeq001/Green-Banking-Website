@@ -1,0 +1,102 @@
+.header-all{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 10vh;
+    background-color: white;
+    justify-content: space-evenly;
+    z-index: 100;
+}
+.navs{
+    display: flex;
+}
+.navs a{
+    text-decoration: none;
+    color: black;
+    margin-left: 50px;
+}
+.navs a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: green;
+    display: block;
+    transition: .5s;
+    margin-top: 10px;
+}
+.navs a:hover::after{
+    width: 100%;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+.mobile-nav, .toggle{
+    display: none;
+}
+.btn button{
+    padding: 12px 20px;
+    background: linear-gradient(90deg, hsl(233, 26%, 24%), hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    border-radius: 20px;  
+    border: none;  
+}
+.close{
+    display: none;
+}
+
+.toggle-btn{
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .navs, .btn{
+        display: none;
+    }
+    .toggle{
+        display: block;
+        z-index: 999;
+        cursor: pointer;
+        margin-left: 30px;
+    }
+
+    .toggle-btn{
+        display: block;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    .mobile-nav a{
+        text-decoration: none;
+        color: black;
+    }
+    .mobile-nav{
+        position: absolute;
+        left: 0;
+        height: 30vh;
+        border-radius: 15px;
+        top: 10.5%;
+        width: 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        overflow: hidden;
+        background-color: white;
+        z-index: 998;
+        transition: .5s ease-in-out;
+
+    }
+    .display{
+        width: 90%;
+        transition: .5s ease-in-out;
+    }
+    .close::after{
+        display: block;
+    }
+    .gen{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+}

@@ -1,0 +1,35 @@
+.easybank{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px 0 100px;
+    background-color: hsl(220, 16%, 96%);
+}
+.easybank-head{
+    width: 37%;
+    margin-bottom: 35px;
+}
+.easybank-head .hd{
+    font-size: 29px;
+}
+.prop{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+@media screen and (max-width:900px) {
+    .easybank{
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+    .easybank-head{
+        text-align: center;
+        width: 100%;
+    }
+    .prop{
+        flex-direction: column;
+        text-align: center;
+        width: 80%;
+    }
+}
